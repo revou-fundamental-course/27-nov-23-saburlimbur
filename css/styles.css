@@ -89,11 +89,6 @@ body {
   color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-  .input-luas-section {
-    padding: 10px; /* Atur padding yang lebih kecil pada layar kecil */
-  }
-}
 .label-input {
   margin-bottom: 10px;
   font-weight: bold;
