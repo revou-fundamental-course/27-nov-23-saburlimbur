@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Revou mini project Frontend</title>
+  </head>
+  <body>
+
+    <!-- NAVIGATION BAR TITLE -->
+
+    <header id="navigation-bar">
+      <h1 id="logo">KALKULATOR SEGITIGA</h1>
+    </header>
+
+    <!-- Content -->
+
+    <section class="home">
+      <p id="greet-home">WELCOME to KATIK</p>
+      <p id="info-home">
+        Hello Sahabat, Selamat datang di Katik! <br>
+        Sebuah Web Apps sederhana untuk membantu kami dalam memproses perhitungan Luas atau Keliling Segitiga
+  </p>
+      </p>
+    </section>
+    
+
+    <!-- LUAS SEGITIGA SECTION -->
+    <main>
+      <div id="luas-container">
+        <section class="segitiga" id="luas-segitiga">
+          <h2 class="header-luas" id="judul">Luas Segitiga</h2>
+        </section>
+
+        <!-- Images Luas Segitiga -->
+        <section class="gambar">
+          <img class="gambar" id="segitiga-gambar" src="src/LuasSegitiga.png" alt="Gambar Luas Segitiga" />
+        </section>
+
+        <!-- Penghitungan -->
+        <section class="input-luas-section">
+          <label for="input-alas" class="label-input">Alas (cm)</label>
+          <input type="number" id="input-alas" class="input" />
+          <label for="input-tinggi" class="label-input">Tinggi (cm)</label>
+          <input type="number" id="input-tinggi" class="input" />
+        </section>
+
+        <div class="buttons">
+          <button class="btn-hitung" onclick="hitungLuasSegitiga()">Hitung</button>
+          <button class="btn-reset" onclick="resetLuasSegitiga()">Reset</button>
+        </div>
+        <section class="hasil-luas-section">
+          <label for="" id="output-judul">Hasil</label>
+          <label for="" class="output-tampil">Luas Segitiga:</label>
+          <div class="output-tampil" id="hasil-luas">
+            <!-- Output Luas Segitiga akan muncul di sini -->
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="js/script.js"></script>
+</html>
