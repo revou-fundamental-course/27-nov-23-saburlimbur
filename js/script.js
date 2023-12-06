@@ -26,9 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
-  const inputAlas = document.getElementById('input-alas'); 
+  const inputAlas = document.getElementById('input-alas');
   const inputTinggi = document.getElementById('input-tinggi');
   const buttonHitung = document.querySelector('.btn-hitung');
   const resetButton = document.querySelector('.btn-reset');
@@ -48,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!isNaN(alas) && !isNaN(tinggi) && alas > 0 && tinggi > 0) {
       const luasSegitiga = 0.5 * alas * tinggi;
-      hasilLuas.innerHTML = "Luas Segitiga: " + luasSegitiga.toFixed(2) + " cm<sup>2</sup>";
-      hasilLuas.style.display = "block";
+      hasilLuas.innerHTML = 'Luas Segitiga: ' + luasSegitiga.toFixed(2) + ' cm<sup>2</sup>';
+      hasilLuas.style.display = 'block';
     } else {
       alert('Masukan nilai dengan benar');
     }
@@ -62,3 +61,4 @@ document.addEventListener('DOMContentLoaded', function () {
     hasilLuas.style.display = 'none';
   }
 });
+

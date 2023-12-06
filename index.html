@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/revou-logo.png" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Revou mini project Frontend</title>
   </head>
   <body>
-
     <!-- NAVIGATION BAR TITLE -->
 
     <header id="navigation-bar">
@@ -15,46 +15,91 @@
 
     <!-- Content -->
 
-    <section class="home">
-      <p id="greet-home">WELCOME to KATIK</p>
-      <p id="info-home">
-        Hello Sahabat, Selamat datang di Katik! <br>
+    <section class="heading-katik">
+      <p id="heading-katik">WELCOME to KATIK</p>
+      <p id="paragraf-katik">
+        Hello Sahabat, Selamat datang di Katik! <br />
         Sebuah Web Apps sederhana untuk membantu kami dalam memproses perhitungan Luas atau Keliling Segitiga
-  </p>
       </p>
     </section>
-    
 
     <!-- LUAS SEGITIGA SECTION -->
     <main>
       <div id="luas-container">
         <section class="segitiga" id="luas-segitiga">
-          <h2 class="header-luas" id="judul">Luas Segitiga</h2>
+          <h2 class="header-luas" id="judul-luas">Luas Segitiga</h2>
         </section>
 
         <!-- Images Luas Segitiga -->
         <section class="gambar">
-          <img class="gambar" id="segitiga-gambar" src="src/LuasSegitiga.png" alt="Gambar Luas Segitiga" />
+          <img src="img/LuasSegitiga.png" class="gambar" id="segitiga-gambar" />
         </section>
 
-        <!-- Penghitungan -->
+        <!-- Header Luas -->
+        <div>
+          <h3 class="header-hitung-luas">Hitung Luas Segitiga</h3>
+        </div>
+
+        <!-- Penghitungan Luas -->
         <section class="input-luas-section">
-          <label for="input-alas" class="label-input">Alas (cm)</label>
-          <input type="number" id="input-alas" class="input" />
-          <label for="input-tinggi" class="label-input">Tinggi (cm)</label>
-          <input type="number" id="input-tinggi" class="input" />
+          <label for="input-alas-luas" class="label-input">Alas (cm)</label>
+          <input type="number" id="input-alas-luas" class="input" placeholder="Nilai Alas" />
+
+          <label for="input-tinggi-luas" class="label-input">Tinggi (cm)</label>
+          <input type="number" id="input-tinggi-luas" class="input" placeholder="Nilai Tinggi" />
         </section>
 
+        <!-- Buttons Luas-->
         <div class="buttons">
           <button class="btn-hitung" onclick="hitungLuasSegitiga()">Hitung</button>
-          <button class="btn-reset" onclick="resetLuasSegitiga()">Reset</button>
+          <button class="btn-reset" onclick=" resetLuasSegitiga()">Reset</button>
         </div>
-        <section class="hasil-luas-section">
-          <label for="" id="output-judul">Hasil</label>
-          <label for="" class="output-tampil">Luas Segitiga:</label>
-          <div class="output-tampil" id="hasil-luas">
-            <!-- Output Luas Segitiga akan muncul di sini -->
-          </div>
+
+        <!-- Output Luas Segitiga -->
+        <section class="hasil-luas">
+          <label for="#" id="label-luas">Hasil Dari</label>
+          <label for="#" class="tampilan-output">Keliling Segitiga Adalah :</label>
+          <div class="output-tampil" id="hasil-luas"></div>
+        </section>
+      </div>
+
+      <!-- KELILING SEGITIGA SECTION -->
+      <div id="keliling-kontainer">
+        <section class="segitiga" id="keliling-segitiga">
+          <h2 class="header-keliling" id="judul-keliling">Keliling Segitiga</h2>
+        </section>
+
+        <!-- Images Keliling Segitiga -->
+        <section class="gambar">
+          <img src="img/KelilingSegitiga.png" id="segitiga-gambar" class="gambar" />
+        </section>
+
+        <!-- Header Keliling -->
+        <div>
+          <h3 class="header-hitung-keliling">Hitung Keliling Segitiga</h3>
+        </div>
+
+        <!-- Perhitungan Keliling -->
+        <section class="input-luas-section">
+          <label for="input-sisi1" class="label-input">Sisi 1 (cm)</label>
+          <input type="number" id="input-sisi1" class="input" />
+          <label for="input-sisi2" class="label-input">Sisi 2 (cm)</label>
+          <input type="number" id="input-sisi2" class="input" />
+          <label for="input-sisi3" class="label-input">Sisi 3 (cm)</label>
+          <input type="number" id="input-sisi3" class="input" />
+        </section>
+
+        <!-- Buttons Keliling -->
+        <div class="buttons">
+          <button class="btn-hitung" onclick="hitungKelilingSegitiga()">Hitung</button>
+          <button class="btn-reset" onclick=" resetKelilingSegitiga()">Reset</button>
+        </div>
+
+        <!-- Output Keliling Segitiga-->
+        <section class="hasil-keliling">
+          <label for="#" id="label-keliling">Hasil Dari</label>
+          <label for="#" class="tampilan-output">Keliling Segitiga Adalah :</label>
+          <div class="output-tampil" id="hasil-keliling"></div>
         </section>
       </div>
     </main>
