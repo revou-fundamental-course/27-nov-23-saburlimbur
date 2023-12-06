@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const inputTinggi = document.getElementById('input-tinggi'); // untk nama ID
-  const buttonHitung = document.querySelector('.btn-hitung'); //query selector untk nama class
+  const inputTinggi = document.getElementById('input-tinggi');
+  const buttonHitung = document.querySelector('.btn-hitung');
   const resetButton = document.querySelector('.btn-reset');
 
   buttonHitung.addEventListener('click', function () {
@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const hasilLuas = document.getElementById('hasil-luas');
 
   buttonHitung.addEventListener('click', function () {
-    hitungLuasSegitiga(); // menghitung
+    hitungLuasSegitiga();
   });
 
   resetButton.addEventListener('click', function () {
-    resetForm(); // mereset
+    resetForm();
   });
 
   function hitungLuasSegitiga() {
