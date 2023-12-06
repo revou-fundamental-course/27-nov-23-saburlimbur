@@ -44,26 +44,23 @@
         <section class="input-luas-section">
           <label for="input-alas-luas" class="label-input">Alas (cm)</label>
           <input type="number" id="input-alas-luas" class="input" placeholder="Nilai Alas" />
-        
+
           <label for="input-tinggi-luas" class="label-input">Tinggi (cm)</label>
           <input type="number" id="input-tinggi-luas" class="input" placeholder="Nilai Tinggi" />
         </section>
-        
 
         <!-- Buttons Luas-->
         <div class="buttons">
-          <button class="btn-hitung">Hitung</button>
-          <button class="btn-reset">Reset</button>
+          <button class="btn-hitung" onclick="hitungLuasSegitiga()">Hitung</button>
+          <button class="btn-reset" onclick=" resetLuasSegitiga()">Reset</button>
         </div>
 
         <!-- Output Luas Segitiga -->
         <section class="hasil-luas">
           <label for="#" id="label-luas">Hasil Dari</label>
           <label for="#" class="tampilan-output">Luas Segitiga adalah</label>
-          <div class="output-tampil" id="hasil-luas">
-          </div>
+          <div class="output-tampil" id="hasil-luas"></div>
         </section>
-
       </div>
 
       <!-- KELILING SEGITIGA SECTION -->
@@ -94,16 +91,15 @@
 
         <!-- Buttons Keliling -->
         <div class="buttons">
-          <button class="btn-hitung">Hitung</button>
-          <button class="btn-reset">Reset</button>
+          <button class="btn-hitung" onclick="hitungKelilingSegitiga()">Hitung</button>
+          <button class="btn-reset" onclick=" resetKelilingSegitiga()">Reset</button>
         </div>
 
         <!-- Output Keliling Segitiga-->
         <section class="hasil-keliling">
           <label for="#" id="label-keliling">Hasil Dari</label>
           <label for="#" class="tampilan-output">Keliling Segitiga Adalah</label>
-          <div class="output-tampil" id="hasil-keliling">
-          </div>
+          <div class="output-tampil" id="hasil-keliling"></div>
         </section>
       </div>
     </main>
