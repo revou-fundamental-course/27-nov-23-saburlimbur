@@ -1,41 +1,64 @@
-function hitungLuasSegitiga() {
-  var alas = parseFloat(document.getElementById('input-alas-luas').value);
-  var tinggi = parseFloat(document.getElementById('input-tinggi-luas').value);
+document.addEventListener('DOMContentLoaded', function () {
+  const inputTinggi = document.getElementById('input-tinggi');
+  const buttonHitung = document.querySelector('.btn-hitung');
+  const resetButton = document.querySelector('.btn-reset');
 
-  if (isNaN(alas) || isNaN(tinggi)) {
-    alert('Kamu Gagal memasukan Nilai, Karena dianggap tidak Valid!');
-    return;
+  buttonHitung.addEventListener('click', function () {
+    hitungLuasSegitiga();
+  });
+
+  resetButton.addEventListener('click', function () {
+    resetForm();
+  });
+
+  function hitungLuasSegitiga() {
+    const tinggi = parseFloat(inputTinggi.value);
+
+    if (!isNaN(tinggi) && tinggi > 0) {
+      const luas = 0.5 * tinggi;
+      alert('Luas Segitiga : ' + luas);
+    } else {
+      alert('Masukan tinggi segitiga yang benar');
+    }
+  }
+  function resetForm() {
+    tinggiInput.value = '';
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const inputAlas = document.getElementById('input-alas');
+  const inputTinggi = document.getElementById('input-tinggi');
+  const buttonHitung = document.querySelector('.btn-hitung');
+  const resetButton = document.querySelector('.btn-reset');
+  const hasilLuas = document.getElementById('hasil-luas');
+
+  buttonHitung.addEventListener('click', function () {
+    hitungLuasSegitiga();
+  });
+
+  resetButton.addEventListener('click', function () {
+    resetForm();
+  });
+
+  function hitungLuasSegitiga() {
+    const alas = parseFloat(inputAlas.value);
+    const tinggi = parseFloat(inputTinggi.value);
+
+    if (!isNaN(alas) && !isNaN(tinggi) && alas > 0 && tinggi > 0) {
+      const luasSegitiga = 0.5 * alas * tinggi;
+      hasilLuas.innerHTML = 'Luas Segitiga: ' + luasSegitiga.toFixed(2) + ' cm<sup>2</sup>';
+      hasilLuas.style.display = 'block';
+    } else {
+      alert('Masukan nilai dengan benar');
+    }
   }
 
-  var luas = 0.5 * alas * tinggi;
-
-  document.getElementById('hasil-luas').innerHTML = luas;
-}
-
-function resetLuasSegitiga() {
-  document.getElementById('input-alas-luas').value = '';
-  document.getElementById('input-tinggi-luas').value = '';
-  document.getElementById('hasil-luas').innerHTML = '';
-}
-
-function hitungKelilingSegitiga() {
-  var sisi1 = parseFloat(document.getElementById('input-sisi1').value);
-  var sisi2 = parseFloat(document.getElementById('input-sisi2').value);
-  var sisi3 = parseFloat(document.getElementById('input-sisi3').value);
-
-  if (isNaN(sisi1) || isNaN(sisi2) || isNaN(sisi3)) {
-    alert('Kamu Gagal memasukan Nilai, Karena dianggap tidak Valid!');
-    return;
+  function resetForm() {
+    inputAlas.value = '';
+    inputTinggi.value = '';
+    hasilLuas.innerHTML = '';
+    hasilLuas.style.display = 'none';
   }
+});
 
-  var keliling = sisi1 + sisi2 + sisi3;
-
-  document.getElementById('hasil-keliling').innerHTML = keliling;
-}
-
-function resetKelilingSegitiga() {
-  document.getElementById('input-sisi1').value = '';
-  document.getElementById('input-sisi2').value = '';
-  document.getElementById('input-sisi3').value = '';
-  document.getElementById('hasil-keliling').innerHTML = '';
-}
